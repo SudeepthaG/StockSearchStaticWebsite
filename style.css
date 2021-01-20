@@ -1,0 +1,218 @@
+body{
+    background-color: #6060a9;
+}
+
+        .searchbox{
+            background-color: #e8e8e8;
+            padding-bottom: 5px;
+            text-align :center;
+            height: 300px;
+            width: 1000px;
+            margin-left: 200px;
+            margin-top: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            /*font-stretch: expanded;*/
+            border-radius: 5px;
+        }
+        .searchbox h1{
+            padding-top: 28px;
+            font-weight: bolder;
+            /*font-weight: 600;*/
+        }
+        .searchbox p{
+            padding-top: 7px;
+            padding-bottom: 23px;
+            font-palette: light;
+            font-size: larger;
+            color: #3f3f3f;
+            border-radius: 5px;
+        }
+        .searchbox p input{
+            border-radius: 5px;
+            border: 0px;
+            border-color: white;
+            padding-left: 2px;
+            padding-right: 5px;
+            padding-bottom: 4px;
+            padding-top: 4px;
+            text-emphasis-color: #3f3f3f;
+        }
+        .searchbox p input:focus{
+            outline-color: #3f3f3f;
+            outline-style: solid;
+            -moz-outline-color: #3f3f3f;                /*not working*/  /*try border:none*/
+        }
+        .searchbox button{
+            padding: 7px 28px;
+            background-color: white;
+            font-size: medium;
+            color: #3f3f3f;
+            border-radius: 5px;
+            border-color: white;
+            border: 0px;
+        }
+        .searchbox button:hover{
+            background-color: #c5c5c5;
+        }
+        .searchbox button.active{               /*not working*/
+            background-color: #c5c5c5;
+            outline-color: black;
+            outline-style: solid;
+        }
+        hr {
+            width: 1000px;
+            margin-left: 200px;
+            margin-top: 20px;
+            color: white;
+        }
+        .recordnotfound{
+            display: none ;
+            margin-left: 470px;
+            margin-top: 20px;
+            width:800px;
+            color: black;
+            font-weight: bold;
+            font-family: sans-serif, "Helvetica Neue", "Lucida Grande", Arial;
+            font-stretch: ultra-expanded;
+        }
+        .navigationbar{
+            display: none ;
+            background-color: white;
+            margin-left: 200px;
+            margin-top: 20px;
+            margin-bottom: 0px;
+            height: 50px;
+            width: 1000px;
+            z-index: +1;
+            background-size: 1600px 30px;
+            overflow: auto;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .navigationbar a{
+            float: left;
+            display: inline;
+            padding: 16px 20px 16px 20px;
+            text-decoration: none;
+            text-align: center;
+            color: black;
+            background-size: 1600px 30px;
+            background-color: white;
+            border-collapse: collapse;
+
+        }
+        .navigationbar a:hover{
+            background-color: rgba(236,236,236,0.75);
+        }
+        /*.navigationbar a:visited{                                                  !*   not working check later using javascript*!*/
+        /*    background: rgba(231,231,231,0.75);*/
+        /*}*/
+        .outlook table{
+            display: none ;
+            padding-top: 20px;
+            background-color: #c5c5c5;
+            margin-left: 200px;
+            margin-top: 20px;
+            width: 1000px;
+            border-collapse: collapse;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+        .outlook table td:nth-child(1){
+            background-color: #e1e1e1;
+            width: 30%;
+            border: 1.5px  solid #c5c5c5;
+            font-weight: bold;
+        }
+        .outlook table td:nth-child(2){
+            background-color: white;
+            text-align: center;
+            border: 1.5px solid  #c5c5c5;
+        }
+        .outlook table p{
+            margin:0px;
+
+            display: -webkit-box;
+             -webkit-box-orient: vertical;
+              -webkit-line-clamp: 5;
+              overflow: hidden;
+        }
+        .summary table{
+            display: none ;
+            padding-top: 20px;
+            background-color: #c5c5c5;
+            margin-left: 200px;
+            margin-top: 20px;
+            width: 1000px;
+            border-collapse: collapse;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+        .summary table p{
+            overflow: hidden;
+            padding: 0px;
+            margin:0px;
+        }
+        .summary table td:nth-child(1){
+            background-color: #e1e1e1;
+            width: 30%;
+            border: 1.5px  solid #c5c5c5;
+            font-weight: bold;
+        }
+        .summary table td:nth-child(2){
+            background-color: white;
+            text-align: center;
+            border: 1.5px solid  #c5c5c5;
+        }
+
+        .charts{
+            display: none;
+            margin-left: 200px;
+            margin-top: 38px;
+            width: 1000px;
+        }
+
+
+        .news table{
+            display: none ;
+            margin-left: 200px;
+            width: 1000px;
+            border-collapse: separate;
+            border-spacing: 0 15px;
+	   margin-top: 5px;
+        }
+
+        .news table td{
+            border: solid 0px;
+            background-color: white;
+            vertical-align: top;
+        }
+        .news table td:nth-child(1){
+            width: 5%;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+        .news table td:nth-child(2){
+
+
+            border-bottom-right-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        .news img{
+            padding: 10px 15px;
+        }
+        .news h4{
+            margin:0px;
+            padding-top: 10px;
+        }
+        .news p{
+            margin:0px;
+        }
+        .news a{
+            padding: 0px;
+            margin:0px;
+        }
+        .changepercent{
+            height: 20px;
+            overflow: hidden;
+            padding: 0px;
+        }

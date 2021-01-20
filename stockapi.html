@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<!--    <link rel="stylesheet" type="text/css" href="static/style.css">-->
+<!--    <script src="static/scripting_functions.js"></script>-->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="scripting_functions.js"></script>
+    <script src="https://code.highcharts.com/stock/highstock.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/data.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/export-data.js"></script>
+    <title>Stock Search</title>
+</head>
+<body>
+
+
+    <div class="searchbox" id="searchbox">
+        <form onsubmit="return false">
+        <br><h1 style="font-size: 36px">Stock Search</h1>
+            <p style="">Enter Stock Ticker Symbol<span style="color: red">*</span> &nbsp; &nbsp;
+            <input type="text" name="username"  pattern="[A-Za-z0-9]{1,20}"  id="inputbox" required onfocus="changeInputBoxColor()">
+        </p>
+        <button type="submit "onclick="StartSearch()">Search</button> &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+        <button type="reset" onclick="clearbutton()">Clear</button>
+        </form>
+    </div>
+    <hr>
+    <div class="recordnotfound" id="recordnotfound">
+        <p>Error : No record has been found, please enter a valid symbol</p>
+    </div>
+    <div class="navigationbar" id="navigationbar">
+        <a href="#" id="outlooklink" onmousemove="mouseOver(id)" onmouseout="mouseOut(id)" onmousedown="mousedown(1,id)" onclick="displayOutlook(); return false">Company Outlook</a>
+        <a href="#" id="summarylink" onmousemove="mouseOver(id)" onmouseout="mouseOut(id)" onmousedown="mousedown(1,id)"  onclick="displaySummary(); return false">Stock Summary</a>
+        <a href="#" id="chartslink" onmousemove="mouseOver(id)" onmouseout="mouseOut(id)" onmousedown="mousedown(1,id)" onclick="displayCharts(); return false">Charts</a>
+        <a href="#" id="newslink" onmousemove="mouseOver(id)" onmouseout="mouseOut(id)" onmousedown="mousedown(1,id)" onclick="displayNews(); return false">Latest News</a>
+    </div>
+    <div class ="outlook" id="outlook">
+        <table id="outlooktable"><br>
+            <tr>
+                <td>Company Name</td>
+                <td id="name"></td>
+            </tr>
+            <tr>
+                <td>Stock Ticker Symbol</td>
+                <td id="ticker"></td>
+            </tr>
+            <tr>
+                <td>Stock Exchange Code</td>
+                <td id="exchangeCode"></td>
+            </tr>
+            <tr>
+                <td>Company Start Date</td>
+                <td id="startDate"></td>
+            </tr>
+            <tr>
+                <td>Description</td>
+                <td><p id="description"></p></td>
+            </tr>
+        </table>
+    </div>
+    <div class ="summary" id="summary">
+        <table id="summarytable"><br>
+            <tr>
+                <td>Stock Ticker Symbol</td>
+                <td id="sticker"></td>
+            </tr>
+            <tr>
+                <td>Trading Day</td>
+                <td id="timestamp"></td>
+            </tr>
+            <tr>
+                <td>Previous Closing Price</td>
+                <td id="prevClose"></td>
+            </tr>
+            <tr>
+                <td>Opening Price</td>
+                <td id="open"></td>
+            </tr>
+            <tr>
+                <td>High Price</td>
+                <td id="high"></td>
+            </tr>
+            <tr>
+                <td>Low Price</td>
+                <td id="low"></td>
+            </tr>
+            <tr>
+                <td>Last Price</td>
+                <td id="last"></td>
+            </tr>
+            <tr>
+                <td>Change</td>
+                <td><p  id="change" ></p></td>
+            </tr>
+            <tr>
+                <td>Change Percent</td>
+                <td><p  id="changepercent" ></p></td>
+            </tr>
+            <tr>
+                <td>Number of Shares Traded</td>
+                <td id="volume"></td>
+            </tr>
+        </table>
+    </div>
+    <div class="charts" id="charts">
+    </div>
+    <div class="news" id="news">
+        <table id="newstable"><br>
+            <tr id="article1" class="article1">
+                <td><img id="img1" src="" width="100px" height="100" alt="Unavailable"></td>
+                <td><h4 id="title1"></h4>
+                    <p id="date1"></p>
+                    <a href="" id="url1" target="_blank">See Original Post</a>
+                </td>
+            </tr>
+            <tr  id="article2" class="article1">
+                <td><img id="img2" src="" width="100px" height="100" alt="Unavailable"></td>
+                <td><h4 id="title2"></h4>
+                    <p id="date2"></p>
+                    <a href="" id="url2" target="_blank">See Original Post</a>
+                </td>
+            </tr>
+            <tr id="article3" class="article1">
+                <td><img id="img3" src="" width="100px" height="100" alt="Unavailable"></td>
+                <td><h4 id="title3"></h4>
+                    <p id="date3"></p>
+                    <a href="" id="url3" target="_blank">See Original Post</a>
+                </td>
+            </tr>
+            <tr id="article4" class="article1">
+                <td><img id="img4" src="" width="100px" height="100" alt="Unavailable"></td>
+                <td><h4 id="title4"></h4>
+                    <p id="date4"></p>
+                    <a href="" id="url4" target="_blank">See Original Post</a>
+                </td>
+            </tr>
+            <tr id="article5" class="article1">
+                <td><img id="img5" src="" width="100px" height="100" alt="Unavailable"></td>
+                <td><h4 id="title5"></h4>
+                    <p id="date5"></p>
+                    <a href="" id="url5" target="_blank" style="padding: 0px">See Original Post</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
